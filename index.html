@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MovieHub - Discover trending, popular and upcoming movies"
+    >
+
+    <title>MovieHub - Discover Movies</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+            <!-- Logo -->
+            <a
+                href="#"
+                class="logo"
+                data-page="home"
+            >
+                <span class="logo-icon">
+                    <i class="fa-solid fa-film"></i>
+                </span>
+
+                <span class="logo-text">
+                    MOVIE HUB
+                </span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+
+                <a
+                    href="#"
+                    class="nav-link active"
+                    data-page="home"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#"
+                    class="nav-link"
+                    data-page="movies"
+                >
+                    Movies
+                </a>
+
+                <a
+                    href="#"
+                    class="nav-link"
+                    data-page="trending"
+                >
+                    Trending
+                </a>
+
+                <a
+                    href="#"
+                    class="nav-link"
+                    data-page="popular"
+                >
+                    Popular
+                </a>
+
+                <a
+                    href="#"
+                    class="nav-link"
+                    data-page="upcoming"
+                >
+                    Upcoming
+                </a>
+
+                <a
+                    href="#"
+                    class="nav-link"
+                    data-page="watchlist"
+                >
+                    Watchlist
+                </a>
+
+            </nav>
+
+
+            <!-- Header Right -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <div class="header-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="globalSearch"
+                        placeholder="Search movies..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        id="clearSearch"
+                        class="clear-search"
+                        aria-label="Clear search"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Theme -->
+                <button
+                    type="button"
+                    class="header-icon-btn"
+                    id="themeBtn"
+                    aria-label="Toggle theme"
+                >
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+
+                <!-- Profile -->
+                <div class="profile-avatar">
+                    P
+                </div>
+
+
+                <!-- Mobile menu -->
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE NAV
+    ====================================================== -->
+
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <a href="#" data-page="home">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="#" data-page="movies">
+            <i class="fa-solid fa-clapperboard"></i>
+            Movies
+        </a>
+
+        <a href="#" data-page="trending">
+            <i class="fa-solid fa-fire"></i>
+            Trending
+        </a>
+
+        <a href="#" data-page="popular">
+            <i class="fa-solid fa-star"></i>
+            Popular
+        </a>
+
+        <a href="#" data-page="upcoming">
+            <i class="fa-solid fa-calendar"></i>
+            Upcoming
+        </a>
+
+        <a href="#" data-page="watchlist">
+            <i class="fa-solid fa-bookmark"></i>
+            Watchlist
+        </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             HOME
+        ================================================== -->
+
+        <section
+            class="page active-page"
+            id="homePage"
+        >
+
+            <!-- HERO -->
+
+            <section
+                class="hero"
+                id="hero"
+            >
+
+                <div class="hero-background"></div>
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="featured-badge">
+                        Featured
+                    </span>
+
+                    <h1 id="heroTitle">
+                        INTERSTELLAR
+                    </h1>
+
+                    <div class="hero-meta">
+
+                        <span id="heroYear">
+                            2014
+                        </span>
+
+                        <span>•</span>
+
+                        <span id="heroGenre">
+                            Sci-Fi
+                        </span>
+
+                        <span>•</span>
+
+                        <span id="heroRuntime">
+                            2h 49m
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <span id="heroRating">
+                            8.7/10
+                        </span>
+
+                    </div>
+
+
+                    <p id="heroPlot">
+                        A team of explorers travel through
+                        a wormhole in space in an attempt
+                        to ensure humanity's survival.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <button
+                            type="button"
+                            class="btn primary-btn"
+                            id="heroTrailerBtn"
+                        >
+                            <i class="fa-solid fa-play"></i>
+                            Watch Trailer
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn secondary-btn"
+                            id="heroWatchBtn"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            Add to Watchlist
+                        </button>
+
+                    </div>
+
+
+                    <!-- Hero dots -->
+                    <div
+                        class="hero-dots"
+                        id="heroDots"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TRENDING SECTION -->
+
+            <section class="content-section">
+
+                <div class="section-head">
+
+                    <div>
+                        <h2>
+                            Trending Now
+                        </h2>
+
+                        <p>
+                            What everyone is watching
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="see-all-btn"
+                        data-page="trending"
+                    >
+                        See All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="movie-grid home-grid"
+                    id="trendingGrid"
+                ></div>
+
+            </section>
+
+
+            <!-- POPULAR SECTION -->
+
+            <section class="content-section">
+
+                <div class="section-head">
+
+                    <div>
+                        <h2>
+                            Popular Movies
+                        </h2>
+
+                        <p>
+                            Most watched movies right now
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="see-all-btn"
+                        data-page="popular"
+                    >
+                        See All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="movie-grid home-grid"
+                    id="popularGrid"
+                ></div>
+
+            </section>
+
+        </section>
+
+
+        <!-- =================================================
+             MOVIES
+        ================================================== -->
+
+        <section
+            class="page"
+            id="moviesPage"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Movies
+                    </h1>
+
+                    <p>
+                        Discover amazing movies from
+                        different genres
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <div class="filter-box">
+
+                    <label for="genreFilter">
+                        Genre
+                    </label>
+
+                    <select id="genreFilter">
+
+                        <option value="all">
+                            All Genres
+                        </option>
+
+                        <option value="Action">
+                            Action
+                        </option>
+
+                        <option value="Adventure">
+                            Adventure
+                        </option>
+
+                        <option value="Animation">
+                            Animation
+                        </option>
+
+                        <option value="Comedy">
+                            Comedy
+                        </option>
+
+                        <option value="Crime">
+                            Crime
+                        </option>
+
+                        <option value="Drama">
+                            Drama
+                        </option>
+
+                        <option value="Fantasy">
+                            Fantasy
+                        </option>
+
+                        <option value="Horror">
+                            Horror
+                        </option>
+
+                        <option value="Mystery">
+                            Mystery
+                        </option>
+
+                        <option value="Romance">
+                            Romance
+                        </option>
+
+                        <option value="Sci-Fi">
+                            Sci-Fi
+                        </option>
+
+                        <option value="Thriller">
+                            Thriller
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-box">
+
+                    <label for="ratingFilter">
+                        Rating
+                    </label>
+
+                    <select id="ratingFilter">
+
+                        <option value="all">
+                            All Ratings
+                        </option>
+
+                        <option value="9">
+                            9.0+
+                        </option>
+
+                        <option value="8">
+                            8.0+
+                        </option>
+
+                        <option value="7">
+                            7.0+
+                        </option>
+
+                        <option value="6">
+                            6.0+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-box">
+
+                    <label for="yearFilter">
+                        Year
+                    </label>
+
+                    <select id="yearFilter">
+
+                        <option value="all">
+                            All Years
+                        </option>
+
+                        <option value="2026">
+                            2026
+                        </option>
+
+                        <option value="2025">
+                            2025
+                        </option>
+
+                        <option value="2024">
+                            2024
+                        </option>
+
+                        <option value="2023">
+                            2023
+                        </option>
+
+                        <option value="2022">
+                            2022
+                        </option>
+
+                        <option value="2021">
+                            2021
+                        </option>
+
+                        <option value="2020">
+                            2020
+                        </option>
+
+                        <option value="2010s">
+                            2010 - 2019
+                        </option>
+
+                        <option value="2000s">
+                            2000 - 2009
+                        </option>
+
+                        <option value="1990s">
+                            1990 - 1999
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-box">
+
+                    <label for="sortFilter">
+                        Sort by
+                    </label>
+
+                    <select id="sortFilter">
+
+                        <option value="rating">
+                            Highest Rated
+                        </option>
+
+                        <option value="year">
+                            Newest
+                        </option>
+
+                        <option value="title">
+                            A - Z
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="movie-grid large-grid"
+                id="moviesGrid"
+            ></div>
+
+
+            <div class="load-more-wrapper">
+
+                <button
+                    type="button"
+                    class="load-more-btn"
+                    id="loadMoviesBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Load More Movies
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TRENDING
+        ================================================== -->
+
+        <section
+            class="page"
+            id="trendingPage"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Trending Movies
+                    </h1>
+
+                    <p>
+                        Movies people are talking about
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="movie-grid large-grid"
+                id="trendingPageGrid"
+            ></div>
+
+
+            <div class="load-more-wrapper">
+
+                <button
+                    type="button"
+                    class="load-more-btn"
+                    id="loadTrendingBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Load More
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             POPULAR
+        ================================================== -->
+
+        <section
+            class="page"
+            id="popularPage"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Popular Movies
+                    </h1>
+
+                    <p>
+                        Top movies loved by audiences
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="movie-grid large-grid"
+                id="popularPageGrid"
+            ></div>
+
+
+            <div class="load-more-wrapper">
+
+                <button
+                    type="button"
+                    class="load-more-btn"
+                    id="loadPopularBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Load More
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             UPCOMING
+        ================================================== -->
+
+        <section
+            class="page"
+            id="upcomingPage"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Upcoming Movies
+                    </h1>
+
+                    <p>
+                        Discover movies from upcoming years
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="movie-grid large-grid"
+                id="upcomingGrid"
+            ></div>
+
+
+            <div class="load-more-wrapper">
+
+                <button
+                    type="button"
+                    class="load-more-btn"
+                    id="loadUpcomingBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Load More
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WATCHLIST
+        ================================================== -->
+
+        <section
+            class="page"
+            id="watchlistPage"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        My Watchlist
+                    </h1>
+
+                    <p>
+                        Movies you want to watch later
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="clear-watchlist-btn"
+                    id="clearWatchlist"
+                >
+                    <i class="fa-regular fa-trash-can"></i>
+                    Clear All
+                </button>
+
+            </div>
+
+
+            <div
+                class="movie-grid large-grid"
+                id="watchlistGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- =================================================
+             SEARCH
+        ================================================== -->
+
+        <section
+            class="page"
+            id="searchPage"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1 id="searchHeading">
+                        Search Results
+                    </h1>
+
+                    <p>
+                        Find your favorite movies
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="search-tabs">
+
+                <button
+                    type="button"
+                    class="search-tab active"
+                >
+                    All
+                </button>
+
+                <button
+                    type="button"
+                    class="search-tab"
+                >
+                    Movies
+                </button>
+
+                <button
+                    type="button"
+                    class="search-tab"
+                >
+                    Genres
+                </button>
+
+                <button
+                    type="button"
+                    class="search-tab"
+                >
+                    Year
+                </button>
+
+            </div>
+
+
+            <div
+                class="movie-grid large-grid"
+                id="searchGrid"
+            ></div>
+
+
+            <div class="load-more-wrapper">
+
+                <button
+                    type="button"
+                    class="load-more-btn"
+                    id="loadSearchBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Load More Results
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MOVIE MODAL
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="movieModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-backdrop"
+            id="modalBackdrop"
+        ></div>
+
+
+        <div class="movie-modal">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="modal-grid">
+
+                <!-- Poster -->
+
+                <div class="modal-poster">
+
+                    <img
+                        src=""
+                        alt="Movie poster"
+                        id="modalPoster"
+                    >
+
+                    <button
+                        type="button"
+                        class="modal-play-btn"
+                        id="modalTrailer"
+                        aria-label="Watch trailer"
+                    >
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Details -->
+
+                <div class="modal-details">
+
+                    <span class="modal-label">
+                        MOVIE
+                    </span>
+
+                    <h2 id="modalTitle">
+                        Movie Title
+                    </h2>
+
+
+                    <div class="modal-meta">
+
+                        <span id="modalYear">
+                            2024
+                        </span>
+
+                        <span>•</span>
+
+                        <span id="modalRated">
+                            PG-13
+                        </span>
+
+                        <span>•</span>
+
+                        <span id="modalRuntime">
+                            2h 10m
+                        </span>
+
+                    </div>
+
+
+                    <div class="modal-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong id="modalRating">
+                            8.7
+                        </strong>
+
+                        <span>
+                            /10
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        class="modal-plot"
+                        id="modalPlot"
+                    >
+                        Movie description goes here.
+                    </p>
+
+
+                    <div class="modal-actions">
+
+                        <button
+                            type="button"
+                            class="btn primary-btn"
+                            id="modalWatchlist"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            Add to Watchlist
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="btn secondary-btn"
+                            id="modalTrailer2"
+                        >
+                            <i class="fa-brands fa-youtube"></i>
+                            Watch Trailer
+                        </button>
+
+                    </div>
+
+
+                    <div class="movie-details-list">
+
+                        <div class="detail-row">
+
+                            <span>
+                                Director
+                            </span>
+
+                            <strong id="modalDirector">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>
+                                Cast
+                            </span>
+
+                            <strong id="modalCast">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>
+                                Genre
+                            </span>
+
+                            <strong id="modalGenre">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>
+                                Language
+                            </span>
+
+                            <strong id="modalLanguage">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+            Added to watchlist
+        </span>
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand-block">
+
+                <a
+                    href="#"
+                    class="footer-logo"
+                    data-page="home"
+                >
+
+                    <span class="footer-logo-icon">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </span>
+
+                    <span class="footer-logo-name">
+                        Movie<span>Hub</span>
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+                    Discover movies, explore trending films,<br>
+                    and keep your favorite movies in one place.<br>
+                    Your ultimate destination for entertainment.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                        class="instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                    >
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="GitHub"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="X"
+                    >
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLORE -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <span class="footer-line"></span>
+
+
+                <a href="#" data-page="home">
+                    <span>›</span>
+                    Home
+                </a>
+
+
+                <a href="#" data-page="popular">
+                    <span>›</span>
+                    Popular
+                </a>
+
+
+                <a href="#" data-page="trending">
+                    <span>›</span>
+                    Trending
+                </a>
+
+
+                <a href="#" data-page="upcoming">
+                    <span>›</span>
+                    Upcoming
+                </a>
+
+
+                <a href="#" data-page="watchlist">
+                    <span>›</span>
+                    Watchlist
+                </a>
+
+            </div>
+
+
+            <!-- MOVIES -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Movies
+                </h3>
+
+                <span class="footer-line"></span>
+
+
+                <a href="#" data-page="movies">
+                    <span>›</span>
+                    Action
+                </a>
+
+
+                <a href="#" data-page="movies">
+                    <span>›</span>
+                    Comedy
+                </a>
+
+
+                <a href="#" data-page="movies">
+                    <span>›</span>
+                    Horror
+                </a>
+
+
+                <a href="#" data-page="movies">
+                    <span>›</span>
+                    Sci-Fi
+                </a>
+
+
+                <a href="#" data-page="movies">
+                    <span>›</span>
+                    Drama
+                </a>
+
+            </div>
+
+
+            <!-- FOLLOW -->
+
+            <div class="footer-column footer-follow">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <span class="footer-line"></span>
+
+
+                <p>
+                    Stay updated with the latest<br>
+                    movies, news and more.
+                </p>
+
+
+                <div class="footer-socials footer-socials-large">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                        class="instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                    >
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="GitHub"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="X"
+                    >
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <div class="copyright">
+                © 2026
+                <strong>MovieHub.</strong>
+                All Rights Reserved.
+            </div>
+
+
+            <div class="legal-links">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <span></span>
+
+                <a href="#">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
